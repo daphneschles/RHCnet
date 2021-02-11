@@ -1,7 +1,7 @@
 import numpy as np
 
 import sys
-impor tos
+import os
 
 import tensorflow as tf
 from tensorflow import math as tfm
@@ -17,7 +17,7 @@ tf.random.set_seed(SEED_VALUE)
 '''
 Append additional dense layers to a given pre-trained set of layers
 '''
-class AppendNet(keras.Model) :
+class AppendNet(tf.keras.Model) :
     def __init__(self, 
         pretrained_model, 
         new_layers = [64,48,24,4], 
@@ -35,14 +35,12 @@ class AppendNet(keras.Model) :
 
         # if the model is being instantiated for inference alone, 
         # there should be no dropout
-        if training :
-            continue
-        else :
-            dout = 0
+        if training==False :
+            dout_rate = 0
 
         for d in new_layers :
             self.dense_layers.append(tf.keras.layers.Dense(d))
-            self.dropout_layers.append(tf.keras.layers.Dropout(dout, seed=SEED_VALUE))
+            self.dropout_layers.append(tf.keras.layers.Dropout(dout_rate, seed=SEED_VALUE))
 
 
     def call(self, x) :
