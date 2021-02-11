@@ -1,6 +1,7 @@
 import numpy as np
-from tqdm import tqdm
+
 import sys
+impor tos
 
 import tensorflow as tf
 from tensorflow import math as tfm
@@ -9,10 +10,12 @@ sys.path.append('..')
 
 
 # set the random seed
-SEED_VALUE = 0
+SEED_VALUE = 780255
+os.environ['PYTHONHASHSEED']=str(SEED_VALUE)
+tf.random.set_seed(SEED_VALUE)
 
 '''
-Append additional dnese layers to a given pre-trained set of layers
+Append additional dense layers to a given pre-trained set of layers
 '''
 class AppendNet(keras.Model) :
     def __init__(self, 
@@ -31,7 +34,7 @@ class AppendNet(keras.Model) :
         self.dropout_layers = []
 
         # if the model is being instantiated for inference alone, 
-        # there shoould
+        # there should be no dropout
         if training :
             continue
         else :
