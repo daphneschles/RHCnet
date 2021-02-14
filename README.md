@@ -1,4 +1,5 @@
 # HemoNet
+Paper coming soon!
 
 ## What is it?
 HemoNet takes in the 12-lead, 10 second ECG, sampled at 500 Hz. It generates the following inferences of hemodynamic values:
