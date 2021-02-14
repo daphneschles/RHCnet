@@ -9,7 +9,7 @@ HemoNet takes in the 12-lead, 10 second ECG, sampled at 500 Hz. It generates the
 
 We pre-train on a much larger cohort of ECGs, then fine-tune the model for the downstream task of interest: identifying abnormal hemodynamic values.
 
-![Model architecture](Figures/arch_diagram.png)
+[comment]: <> (![Model architecture](Figures/arch_diagram.png))
 
 ## How do I use it?
 We include an example ECG from PhysioNet<sup>[1](#ptb),[2](#physionet)</sup> in the [example notebook](Examples/model_loading_demo.ipynb). The input leads should be in the following order: I, II, III, aVR, aVL, aVF, V1-V6. Each ECG is normalized by its mean and variance across all samples. An input array should be of shape Nx5000x12 for N ECGs.
