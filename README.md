@@ -14,6 +14,8 @@ We include an example ECG from PhysioNet<sup>[1](#ptb),[2](#physionet)</sup> in 
 
 The output will be of shape Nx4, where the columns ordered mPAP, PCWP, PVR, CO.
 
+![Model architecture](Figures/arch_diagram.png)
+
 ## Dependencies
 - numpy
 - pandas
