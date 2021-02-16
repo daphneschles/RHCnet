@@ -1,4 +1,4 @@
-# HemoNet
+# RHCnet
 Paper coming soon!
 
 ## What is it?
