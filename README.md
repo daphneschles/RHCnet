@@ -13,7 +13,7 @@ We pre-train on a much larger cohort of ECGs, then fine-tune the model for the d
 ## How do I use it?
 We include an example ECG from PhysioNet<sup>[1](#ptb),[2](#physionet)</sup> in the [example notebook](Examples/model_loading_demo.ipynb). The input leads should be in the following order: I, II, III, aVR, aVL, aVF, V1-V6. Each ECG is normalized by its mean and variance across all samples. An input array should be of shape Nx5000x12 for N ECGs.
 
-The output will be of shape Nx4, where the columns ordered mPAP, PCWP, PVR, CO.
+The output will be of shape Nx4, where the columns are ordered mPAP, PCWP, PVR, CO.
 
 
 ## Dependencies
