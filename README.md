@@ -15,6 +15,15 @@ We include an example ECG from PhysioNet<sup>[1](#ptb),[2](#physionet)</sup> in 
 
 The output will be of shape Nx4, where the columns are ordered mPAP, PCWP, PVR, CO.
 
+## Performance
+We are most interested in positive and negative predictive values (PPV and NPV respectively). We compute these quantities using a threshold that produces a sensitivity of 80 percent, where the threshold must be computed separately for each bootstrap. These thresholds are 0.46±0.06 for the PCWP task, and 0.52±0.02 for the mPAP task. The PPVs and NPVs, computed across bootstraps, are included in the table below.
+
+|     | PCWP        | mPAP       |
+|-----|-------------|------------|
+| PPV | 0.67±0.03   | 0.83±0.02  |
+| NPV | 0.78±0.01   | 0.63±0.02  |
+
+In addition, we examine the unreliability score by examining the 10% most unreliable predictions, as compared to the 90% least unreliable. Across bootstraps, predictions with an unreliability greater than 0.15±0.03 were among the 10% most unreliable predictions.
 
 ## Dependencies
 - numpy
