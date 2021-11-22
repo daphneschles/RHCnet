@@ -18,7 +18,7 @@ The output will be of shape Nx4, where the columns are ordered mPAP, PCWP, PVR, 
 ## Performance
 We are most interested in positive and negative predictive values (PPV and NPV respectively). We compute these quantities using a threshold that produces a sensitivity of 80 percent, where the threshold must be computed separately for each bootstrap. These thresholds are 0.46±0.06 for the PCWP task, and 0.52±0.02 for the mPAP task. The PPVs and NPVs, computed across bootstraps, are included in the table below.
 
-|     | PCWP        | mPAP       |
+|     | mPCWP        | mPAP       |
 |-----|-------------|------------|
 | PPV | 0.67±0.03   | 0.83±0.02  |
 | NPV | 0.78±0.01   | 0.63±0.02  |
