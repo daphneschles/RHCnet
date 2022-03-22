@@ -1,5 +1,7 @@
 # RHCnet
-Paper coming soon! For now, please reference this page if you use our model.
+Read our paper describing this work [here](https://t.co/S92x7vAiPZ). If you use our model, please cite the paper directly:
+
+> Schlesinger, Daphne E., et al. "A Deep Learning Model for Inferring Elevated Pulmonary Capillary Wedge Pressures From the 12-Lead Electrocardiogram." JACC: Advances 1.1 (2022): 100003.
 
 ## What is it?
 RHCnet takes in the 12-lead, 10 second ECG, sampled at 500 Hz. It generates the following inferences of hemodynamic values:
