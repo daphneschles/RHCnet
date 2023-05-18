@@ -40,7 +40,7 @@ class AppendNet(tf.keras.Model) :
         self.final_layer = tf.keras.layers.Dense(new_layers[-1])
 
 
-    def call(self, x, training=True, tr=None) :
+    def call(self, x, training=False, tr=None) :
         
         if tr != None:
             warnings.warn(
